@@ -1,0 +1,24 @@
+<button (click)="navToHomePage()" class="btn primary lg home-btn">Go back</button>
+
+<div *ngIf="model" class="model-container">
+    <div class="card">
+
+        <div class="header-image-model">
+            <div class="header-model">{{model.make}} {{model.name}}</div>
+            <img class="logo-size" [src]="model.image">
+        </div>
+
+        <div class="details-model">
+            <div>Class: <span class="text-bold">{{model.class}}</span></div>
+            <div>Fuel type: <span class="text-bold">{{model.fuelType}}</span></div>
+            <div>Transmission: <span class="text-bold">{{model.transmission}}</span></div>
+            <div>Year: <span class="text-bold">{{model.year}}</span></div>
+            <div>Combination MPG: <span class="text-bold">{{model.combinationMpg}}</span></div>
+        </div>
+
+        <div class="model-buttons">
+            <button class="btn secondary lg">Get a Quote</button>
+            <button (click)="showOffer()" class="btn primary lg">Finance offer</button>
+        </div>
+    </div>
+</div>

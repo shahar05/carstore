@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@import '/src/styles/colors';
+
+.card-header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    box-shadow: 0 4px 10px 0 $card-color;
+}
+
+.card-hover {
+    &:hover {
+        color: white;
+        background-color: #355c7d;
+        transition: background-color 0.5s ease;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.logo-size {
+    width: 200px;
+    height: 200px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid $blue-btn-color;
+    cursor: pointer;
+    padding: 5px 10px;
+
+    &.lg{
+        padding: 10px 15px;
+        border-radius: 20px;
+    }
+
+    &.primary {
+        background-color: $blue-btn-color;
+        color: white;
+
+        &:hover {
+            transition: background-color 0.5s ease;
+            transition: color 0.5s ease;
+            background-color: white;
+            color: $blue-btn-color;
+        }
+    }
+
+    &.secondary {
+        background-color: white;
+        color: $blue-btn-color;
+
+        &:hover {
+            transition: background-color 0.5s ease;
+            transition: color 0.3s ease;
+            background-color: $blue-btn-color;
+            color: white;
+        }
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

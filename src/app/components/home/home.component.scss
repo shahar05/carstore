@@ -1,0 +1,33 @@
+.game-btn-container {
+    margin: 15px;
+}
+
+.home-btn{
+    margin-left: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    margin: 30px;
+    font-size: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.container-list {
+    margin-top: 30px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+// .container-list::after {
+//     content: "";
+//     flex: auto;
+//   }

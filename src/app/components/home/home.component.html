@@ -1,0 +1,17 @@
+    <div class="game-btn-container">
+        <button (click)="navToGamePage()" class="btn secondary lg">Play a game</button>
+        <button *ngIf="state === State.Model" (click)="changeToBrandState()" class="btn primary lg home-btn">Home page</button>
+    </div>
+
+    <div class="header"> 
+        {{header}}
+    </div>
+
+    <div class="center" [ngSwitch]="state">
+        <div class="container-list" *ngSwitchCase="State.Brand">
+            <brand (click)="changeToModelState(brand)" *ngFor="let brand of brands" [brand]="brand"></brand>
+        </div>
+        <div class="container-list" *ngSwitchCase="State.Model">
+            <model (click)="navToModelPage(model)" *ngFor="let model of models" [model]="model"></model>
+        </div>
+    </div>

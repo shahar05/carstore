@@ -1,0 +1,34 @@
+.home-btn{
+    margin: 15px;
+}
+
+.model-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header-image-model {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-model {
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+    }
+
+    .details-model {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .model-buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

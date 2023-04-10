@@ -1,0 +1,21 @@
+<div class="finance-offer-container">
+    <div class="finance-header"> {{data.carName}} {{data.carModel}} </div>
+    <div class="finance-interest">interest: {{interest}}% </div>
+    <div class="finance-slider">
+        <mat-slider min="0" [max]="data.price" step="500" showTickMarks discrete [displayWith]="formatLabel">
+            <input matSliderThumb (valueChange)="calcLoan($event)">
+        </mat-slider>
+    </div>
+    <div class="finance-slider">
+        <mat-slider min="1" [max]="120" step="1" showTickMarks discrete>
+            <input matSliderThumb (valueChange)="calcDuration($event)">
+        </mat-slider>
+    </div>
+    <div class="finance-summary">
+        <div class="card">Average amount per month: <span class="text-bold">{{avgMonthReturn}}</span></div>
+        <div class="card">Total: <span class="text-bold">{{totalPayment}}</span></div>
+    </div>
+    <div class="go-back-btn">
+        <button (click)="exitDialog()" class="btn primary lg">Back</button>
+    </div>
+</div>

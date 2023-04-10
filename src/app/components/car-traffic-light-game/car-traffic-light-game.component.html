@@ -1,0 +1,16 @@
+<div class="back-btn-container">
+    <button (click)="navToHomePage()" class="btn primary lg">Go back</button>
+</div>
+
+<div class="traffic-light-container">
+    <div class="traffic-light-box">
+        <div class="circle" [class.red]="redLightOn"></div>
+        <div class="circle" [class.green]="!redLightOn"></div>
+    </div>
+</div>
+
+<img class="car" src="/assets/logos/car.png" [style]="carPositionStr">
+
+<div class="card game-msg-box text-center">
+    {{gameMsg}}
+</div>
